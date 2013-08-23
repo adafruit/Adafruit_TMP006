@@ -1,5 +1,5 @@
 /*************************************************** 
-  This is a library for the TMP006 Barometric Pressure & Temp Sensor
+  This is a library for the TMP006 Temp Sensor
 
   Designed specifically to work with the Adafruit TMP006 Breakout 
   ----> https://www.adafruit.com/products/1296
