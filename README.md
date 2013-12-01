@@ -2,6 +2,7 @@ Making a Robo-Chef
 ==================
 
 > We can build it. We have the technology.
+
 -- Some TV Show
 
 
@@ -9,6 +10,7 @@ Making a Robo-Chef
 
 
 > I for one welcome our new Robo-Chefs 
+
 -- Anonymous person
 
 
