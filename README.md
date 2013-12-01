@@ -3,9 +3,9 @@ Making a Robo-Chef
 
 > We can build it. We have the technology.
 
--- Some TV Show
+-- Some Awesome TV Show
 
-### Time to make a Robo-Chef.
+## Time to make a Robo-Chef.
 
 Main Ingredients:
 
@@ -17,6 +17,12 @@ Main Ingredients:
   * Open CV capabilities (maybe we want to wait until the beef, or whatnot, changes color)
 3.  High-Torque Servo Motors
   * For turning knobs on the stove to the off position.
+
+
+### BOM
+
+| Item | Number | Total Cost | Link To Supplier |
+| Contactless Temperature Sensor | 1 | 
 
 
 
