@@ -8,6 +8,7 @@ Making a Robo-Chef
 ### Time to make a Robo-Chef.
 
 Main Ingredients:
+
 1.  Adafruit TMP006 Infrared Thermopile Sensor
   * contactless temperature sensor -- can watch the water boil
 2.  Internet Connection
