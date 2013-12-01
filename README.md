@@ -27,6 +27,7 @@ Main Ingredients:
 | Raspberry Pi | 1 | $39.95 | [link](http://www.adafruit.com/products/998) |
 | Raspberry Pi Camera | 1 | $29.95 | [link](http://www.adafruit.com/products/1367) | 
 | Arduino Compatible Board | 1 | $11.48 | [link](http://www.ebay.com/itm/Arduino-UNO-R3-board-with-DIP-ATmega328P-Development-Board-/271320440356?pt=LH_DefaultDomain_0&hash=item3f2bf55e24) | 
+| Wires and Stuff | 1 | $7.25 | [link](http://www.ebay.com/itm/70PCS-Breadboard-Jumper-Cable-Wire-PCB-Protoboard-Test-Circuit-Board-400-Point-/400614957426?pt=LH_DefaultDomain_0&hash=item5d46832172)
 
 
 
