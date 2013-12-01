@@ -8,13 +8,13 @@ Making a Robo-Chef
 ### Time to make a Robo-Chef.
 
 Main Ingredients:
-1. Adafruit TMP006 Infrared Thermopile Sensor
+1.  Adafruit TMP006 Infrared Thermopile Sensor
   * contactless temperature sensor -- can watch the water boil
-2. Internet Connection
+2.  Internet Connection
   * For updating a server, and possibly tweeting
-4. Raspberry Pi Camera
+4.  Raspberry Pi Camera
   * Open CV capabilities (maybe we want to wait until the beef, or whatnot, changes color)
-3. High-Torque Servo Motors
+3.  High-Torque Servo Motors
   * For turning knobs on the stove to the off position.
 
 
