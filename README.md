@@ -1,3 +1,19 @@
+Making a Robo-Chef
+==================
+
+> We can build it. We have the technology.
+-- Some TV Show
+
+
+
+
+
+> I for one welcome our new Robo-Chefs 
+-- Anonymous person
+
+
+## Credits and Original README.txt
+
 This is a library for the Adafruit TMP006 Infrared Thermopile Sensor
 
 Designed specifically to work with the Adafruit TMP006 Breakout 
