@@ -5,7 +5,7 @@ Making a Robo-Chef
 
 -- Some Awesome TV Show
 
-## :fork_and_knife: Time to make a Robo-Chef.:fork_and_knife:
+## :fork_and_knife: It's Time, to make a Robo-Chef.:fork_and_knife:
 
 Main Ingredients:
 
