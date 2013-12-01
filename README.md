@@ -22,7 +22,10 @@ Main Ingredients:
 ### BOM
 
 | Item | Number | Total Cost | Link To Supplier |
-| Contactless Temperature Sensor | 1 | 
+| Contactless Temperature Sensor | 1 | $14.95 | [link](http://www.adafruit.com/products/1296) |
+| Raspberry Pi | 1 | $39.95 | [link](http://www.adafruit.com/products/998) |
+| Raspberry Pi Camera | 1 | $29.95 | [link](http://www.adafruit.com/products/1367) | 
+
 
 
 
