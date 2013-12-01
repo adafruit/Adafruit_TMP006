@@ -26,6 +26,7 @@ Main Ingredients:
 | Contactless Temperature Sensor | 1 | $14.95 | [link](http://www.adafruit.com/products/1296) |
 | Raspberry Pi | 1 | $39.95 | [link](http://www.adafruit.com/products/998) |
 | Raspberry Pi Camera | 1 | $29.95 | [link](http://www.adafruit.com/products/1367) | 
+| Arduino Compatible Board | 1 | $11.48 | [link](http://www.ebay.com/itm/Arduino-UNO-R3-board-with-DIP-ATmega328P-Development-Board-/271320440356?pt=LH_DefaultDomain_0&hash=item3f2bf55e24) | 
 
 
 
