@@ -29,6 +29,7 @@ Adafruit_TMP006 tmp006;
 
 float objt;
 float diet;
+char ch;
 
 void setup() { 
   Serial.begin(9600);
@@ -59,10 +60,9 @@ void loop() {
          diet = tmp006.readDieTempC(); // die temperature in C
          Serial.print(diet);
       }
+      else 
+      {
+      delay(10);
+      }
   }
-  else 
-  {
-     delay(0.1);
-  }
-  
 }
