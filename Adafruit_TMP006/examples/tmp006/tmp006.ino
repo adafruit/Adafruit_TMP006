@@ -27,6 +27,9 @@
 Adafruit_TMP006 tmp006;
 //Adafruit_TMP006 tmp006(0x41);  // start with a diferent i2c address!
 
+float objt;
+float diet;
+
 void setup() { 
   Serial.begin(9600);
   Serial.println("Adafruit TMP006 example");
@@ -41,11 +44,19 @@ void setup() {
 }
 
 void loop() {
-   float objt = tmp006.readObjTempC();
-  // Serial.print("Object Temperature: "); Serial.print(objt); Serial.println("*C");
-  if (Serial.detectSerial()
-  // float diet = tmp006.readDieTempC();
-  // Serial.print("Die Temperature: "); Serial.print(diet); Serial.println("*C");
-   
-   delay(4000); // 4 seconds per reading for 16 samples per reading
+
+  if (Serial.available()) 
+  {
+      ch = Serial.read();
+      
+      if ( ch == '1' ) 
+      { 
+         objt = tmp006.readObjTempC(); // object temperature in C
+         Serial.print(objt);
+      }
+      else if ( ch == '2' )
+      {
+         diet = tmp006.readDieTempC(); // die temperature in C
+         Serial.print(diet);
+      }      
 }
