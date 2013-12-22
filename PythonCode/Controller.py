@@ -36,10 +36,11 @@ while True:
   result = firebase.get('/RoboChef/Cooking', None)
   if result['watching']=="temperature":
     tempC = send_and_receive('1')
-    f = open("temp.txt", "w")
+    f = open("temp.txt", "a")
     f.write( str(tempC) + strftime(" %s %Y-%m-%d %H:%M:%S") + "\n" )
     f.close()
     firebase.put('/','RoboChef/Food',{'CurrentTemp': str( tempC )})
+    time.sleep(2)
   else:
     time.sleep(2)
 
