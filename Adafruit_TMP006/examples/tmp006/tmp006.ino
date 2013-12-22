@@ -24,15 +24,8 @@
 // SDA connects to the I2C data pin. On newer boards this is labeled with SDA
 // otherwise, on the Uno, this is A4 on the Mega it is 20 and on the Leonardo/Micro digital 2
 
-
-//Declaring stuff
-
-  Adafruit_TMP006 tmp006;
-  //Adafruit_TMP006 tmp006(0x41);  // start with a different i2c address!
-
-  float objt; //declare the object temperature variable (a float)
-
-//end Declaring Stuff
+Adafruit_TMP006 tmp006;
+//Adafruit_TMP006 tmp006(0x41);  // start with a diferent i2c address!
 
 void setup() { 
   Serial.begin(9600);
@@ -48,11 +41,11 @@ void setup() {
 }
 
 void loop() {
-  
-   objt = tmp006.readObjTempC();
-   Serial.print(objt); 
+   float objt = tmp006.readObjTempC();
+  // Serial.print("Object Temperature: "); Serial.print(objt); Serial.println("*C");
+  if (Serial.detectSerial()
+  // float diet = tmp006.readDieTempC();
+  // Serial.print("Die Temperature: "); Serial.print(diet); Serial.println("*C");
    
    delay(4000); // 4 seconds per reading for 16 samples per reading
 }
-
-
