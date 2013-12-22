@@ -29,10 +29,10 @@ Adafruit_TMP006 tmp006;
 
 float objt;
 float diet;
+char ch;
 
 void setup() { 
   Serial.begin(9600);
-  Serial.println("Adafruit TMP006 example");
 
   // you can also use tmp006.begin(TMP006_CFG_1SAMPLE) or 2SAMPLE/4SAMPLE/8SAMPLE to have
   // lower precision, higher rate sampling. default is TMP006_CFG_16SAMPLE which takes
@@ -59,10 +59,9 @@ void loop() {
          diet = tmp006.readDieTempC(); // die temperature in C
          Serial.print(diet);
       }
+      else 
+      {
+      delay(10);
+      }
   }
-  else 
-  {
-     delay(0.1);
-  }
-  
 }
