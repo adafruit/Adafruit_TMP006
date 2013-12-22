@@ -59,4 +59,8 @@ void loop() {
          diet = tmp006.readDieTempC(); // die temperature in C
          Serial.print(diet);
       }      
+      else 
+      {
+         delay(0.1);
+      }
 }
