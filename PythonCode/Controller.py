@@ -1,23 +1,21 @@
 #!/usr/bin/python
-
-#USAGE: do sudo python Controller.py NAME_OF_FIREBASE
-#Just use the name of your firebase without "https://" nor the  "firebaseio.com"
- 
 from firebase import firebase
-import serial, time, sys
-from subprocess import *
+import serial, time
+ser = serial.Serial('/dev/tty.usbmodem1411', 9600, timeout = 0.1)
 
 
-
-#find out which /dev/ttyACM it is, and return the first result
-serial_port=check_output("find /dev/ -name ttyACM* | head -n 1", shell=True)
-#ser = serial.Serial('/dev/ttyACM', 9600, timeout = 0.1)
-ser = serial.Serial( serial_port.rstrip(), 9600, timeout = 0.1)
 
 def send( theinput ):
   ser.write( theinput )
-  time.sleep(0.01)
-  
+  while True:
+    try:
+      time.sleep(0.01)
+      #state = ser.readline()
+      #print state
+      break
+    except:
+      pass
+  time.sleep(0.1)
 
 def send_and_receive( theinput ):
   ser.write( theinput )
@@ -26,29 +24,17 @@ def send_and_receive( theinput ):
       time.sleep(0.01)
       state = ser.readline()
       print state
-      break
+      return state
     except:
       pass
-  time.sleep(0.01)
-
-  
-firebase = firebase.FirebaseApplication("https://testbed-firebase.firebaseio.com", None)
+  time.sleep(0.1)
+firebase = firebase.FirebaseApplication('https://testbed-firebase.firebaseio.com', None)
 
 while True:
-  try:
-    result = firebase.get('/robochef/temp', None)
-    if result['meaasure']=="forward":
-     send_and_receive('1')
-    elif result['direction']=="backward":
-      send('2')
-    elif result['direction']=="left":
-      send('3')
-    elif result['direction']=="right":
-      send('4')
-    elif result['direction']=="stop":
-      send('5')
-    time.sleep(0.1)
-  except:
-    time.sleep(.1)
-    pass
+  result = firebase.get('/RoboChef/Cooking', None)
+  if result['watching']=="temperature":
+    tempC = send_and_receive('1')
+    firebase.put('/','RoboChef/Food',{'CurrentTemp': str( tempC )})
+  else:
+    time.sleep(2)
 
