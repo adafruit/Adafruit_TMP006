@@ -1,6 +1,8 @@
 #!/usr/bin/python
 from firebase import firebase
 import serial, time
+from time import strftime
+
 ser = serial.Serial('/dev/tty.usbmodem1411', 9600, timeout = 0.1)
 
 
@@ -34,6 +36,9 @@ while True:
   result = firebase.get('/RoboChef/Cooking', None)
   if result['watching']=="temperature":
     tempC = send_and_receive('1')
+    f = open("temp.txt", "w")
+    f.write( str(tempC) + strftime(" %s %Y-%m-%d %H:%M:%S") + "\n" )
+    f.close()
     firebase.put('/','RoboChef/Food',{'CurrentTemp': str( tempC )})
   else:
     time.sleep(2)
