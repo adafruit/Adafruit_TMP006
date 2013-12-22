@@ -33,7 +33,6 @@ char ch;
 
 void setup() { 
   Serial.begin(9600);
-  Serial.println("Adafruit TMP006 example");
 
   // you can also use tmp006.begin(TMP006_CFG_1SAMPLE) or 2SAMPLE/4SAMPLE/8SAMPLE to have
   // lower precision, higher rate sampling. default is TMP006_CFG_16SAMPLE which takes
