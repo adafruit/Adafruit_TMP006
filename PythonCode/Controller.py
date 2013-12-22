@@ -36,9 +36,9 @@ firebase = firebase.FirebaseApplication("https://testbed-firebase.firebaseio.com
 
 while True:
   try:
-    result = firebase.get('/telerobot/drive', None)
-    if result['direction']=="forward":
-     send('1')
+    result = firebase.get('/robochef/temp', None)
+    if result['meaasure']=="forward":
+     send_and_receive('1')
     elif result['direction']=="backward":
       send('2')
     elif result['direction']=="left":
