@@ -29,7 +29,13 @@
  #include "WProgram.h"
 #endif
 #include <Adafruit_Sensor.h>
-#include "Wire.h"
+
+#ifdef __AVR_ATtiny85__
+  #include "TinyWireM.h"
+  #define Wire TinyWireM
+#else
+  #include "Wire.h"
+#endif
 
 // uncomment for debugging!
 //#define TMP006_DEBUG 1
