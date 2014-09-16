@@ -42,6 +42,20 @@ boolean Adafruit_TMP006::begin(uint8_t samplerate) {
   return true;
 }
 
+void Adafruit_TMP006::sleep() {
+  // Read the control register and update it so bits 12-14 are zero to enter sleep mode.
+  uint16_t control = read16(TMP006_CONFIG);
+  control &= ~(TMP006_CFG_MODEON);
+  write16(TMP006_CONFIG, control);
+}
+
+void Adafruit_TMP006::wake() {
+  // Read the control register and update it so bits 12-14 are one to enter full operation.
+  uint16_t control = read16(TMP006_CONFIG);
+  control |= TMP006_CFG_MODEON;
+  write16(TMP006_CONFIG, control);
+}
+
 //////////////////////////////////////////////////////
 
 double Adafruit_TMP006::readDieTempC(void) {
