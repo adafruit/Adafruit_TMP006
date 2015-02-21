@@ -15,6 +15,7 @@
  ****************************************************/
 
 #include <Wire.h>
+#include <Adafruit_Sensor.h>
 #include "Adafruit_TMP006.h"
 
 // Connect VCC to +3V (its a quieter supply than the 5V supply on an Arduino
