@@ -62,7 +62,7 @@
 class Adafruit_TMP006  {
  public:
   Adafruit_TMP006(uint8_t addr = TMP006_I2CADDR);
-  boolean begin(uint8_t samplerate = TMP006_CFG_16SAMPLE);  // by default go highres
+  boolean begin(uint16_t samplerate = TMP006_CFG_16SAMPLE);  // by default go highres
 
   void sleep();  // Put chip into low power mode (disables temperature measurements).
   void wake();   // Wake from low power mode.
