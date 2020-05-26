@@ -1,3 +1,4 @@
+# Adafruit TMP006 IR Thermopile Library [![Build Status](https://github.com/adafruit/Adafruit_TMP006/workflows/Arduino%20Library%20CI/badge.svg)](https://github.com/adafruit/Adafruit_TMP006/actions)[![Documentation](https://github.com/adafruit/ci-arduino/blob/master/assets/doxygen_badge.svg)](http://adafruit.github.io/Adafruit_TMP006/html/index.html)
 This is a library for the Adafruit TMP006 Infrared Thermopile Sensor
 
 Designed specifically to work with the Adafruit TMP006 Breakout 
