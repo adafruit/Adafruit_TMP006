@@ -29,13 +29,22 @@ Adafruit_TMP006::Adafruit_TMP006(uint8_t i2caddr) { _addr = i2caddr; }
 
 /**************************************************************************/
 /*!
-    @brief Initialize I2C and connect to the TMP006 sensor
+    @brief Initialize I2C and connect to the TMP006 sensor. For ESP board family you can modify the SDA and SCL PIN
+    @param sdaPin The SDA pin to use or use default
+    @param sdaPin The SCL pin to use or use default
     @param samplerate The value written to TMP006_CONFIG
     @returns True if sensor found
 */
 /**************************************************************************/
-boolean Adafruit_TMP006::begin(uint16_t samplerate) {
-  Wire.begin();
+boolean Adafruit_TMP006::begin(int sdaPin, int sclPin, uint16_t samplerate) {
+  #if defined(__AVR__)
+    Wire.begin();
+  #else
+    if(sdaPin != -1 && sclPin != -1)
+      Wire.begin(sdaPin, sclPin);
+    else 
+      Wire.begin();
+  #endif
 
   write16(TMP006_CONFIG, TMP006_CFG_MODEON | TMP006_CFG_DRDYEN | samplerate);
 
